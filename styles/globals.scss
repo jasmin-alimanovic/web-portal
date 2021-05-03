@@ -137,3 +137,16 @@ img {
 img:hover {
   opacity: 1;
 }
+html,
+body {
+  width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+  section {
+    width: 100%;
+  }
+  .posts {
+    width: 100%;
+  }
+}

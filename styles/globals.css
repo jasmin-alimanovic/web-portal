@@ -5758,6 +5758,10 @@ fieldset[disabled] .select select:hover {
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .container {
   margin-bottom: 3rem;
 }
@@ -5866,5 +5870,19 @@ img {
 
 img:hover {
   opacity: 1;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+  section {
+    width: 100%;
+  }
+  .posts {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=globals.css.map */
