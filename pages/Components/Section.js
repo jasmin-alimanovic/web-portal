@@ -7,10 +7,10 @@ const Section = ({ title, posts, isFlex, hasDescription }) => {
     <section className={styles.SportSection}>
       <SectionTitle title={title} />
       <div className={!isFlex ? styles.SportPosts : styles.PostsFlex}>
-        {posts.map((post) => (
+        {posts?.map((post) => (
           <Post
             hasDescription={hasDescription}
-            key={post.id}
+            key={post).id}
             isFlex={isFlex}
             post={post}
           />

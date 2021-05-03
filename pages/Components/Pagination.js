@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 
 const Pagination = ({ posts, currentPage, paginate, postsPerPage }) => {
   const numbers = [];
-  let totalNumbers = Math.ceil(posts.length / postsPerPage);
+  let totalNumbers = Math.ceil(posts?.length / postsPerPage);
   for (let i = 1; i <= totalNumbers; i++) {
     numbers.push(i);
   }
