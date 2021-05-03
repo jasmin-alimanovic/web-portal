@@ -10,7 +10,7 @@ const Section = ({ title, posts, isFlex, hasDescription }) => {
         {posts?.map((post) => (
           <Post
             hasDescription={hasDescription}
-            key={post).id}
+            key={post?.id}
             isFlex={isFlex}
             post={post}
           />
