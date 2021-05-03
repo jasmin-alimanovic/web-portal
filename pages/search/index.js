@@ -34,7 +34,7 @@ const index = () => {
    * fetches data from api and displays filtered data on the screen
    */
   async function onChangeVal(value) {
-    const res = await fetch("http://localhost:3000/api/posts");
+    const res = await fetch(`${server}/api/posts`);
     const posts = await res.json();
     setPosts(
       posts.filter((post) =>
@@ -47,7 +47,7 @@ const index = () => {
    * fetches data from api and stores it in use state
    */
   const getPosts = async () => {
-    const res = await fetch("http://localhost:3000/api/posts");
+    const res = await fetch(`${server}/api/posts`);
     const data = await res.json();
     setPosts(data);
   };

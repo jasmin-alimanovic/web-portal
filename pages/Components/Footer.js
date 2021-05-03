@@ -41,37 +41,37 @@ const Footer = () => {
         <div className={`${styles.mainContent} content`}>
           <div className={styles.vijesti}>
             <h2>Vijesti</h2>
-            <Link href="http://localhost:3000/vijesti/istocno-sarajevo">
+            <Link href={`${server}/vijesti/istocno-sarajevo`}>
               <a>Istočno Sarajevo</a>
             </Link>
-            <Link href="http://localhost:3000/vijesti/republika-srpska">
+            <Link href={`${server}/vijesti/republika-srpska`}>
               <a>Republika Srpska</a>
             </Link>
-            <Link href="http://localhost:3000/vijesti/bih">
+            <Link href={`${server}/vijesti/bih`}>
               <a>BiH</a>
             </Link>
-            <Link href="http://localhost:3000/vijesti/region">
+            <Link href={`${server}/vijesti/region`}>
               <a>Region</a>
             </Link>
-            <Link href="http://localhost:3000/vijesti/svijet">
+            <Link href={`${server}/vijesti/svijet`}>
               <a>Svijet</a>
             </Link>
           </div>
           <div className={styles.vijesti}>
             <h2>Magazin</h2>
-            <Link href="http://localhost:3000/magazin">
+            <Link href={`${server}/magazin`}>
               <a>Kultura</a>
             </Link>
-            <Link href="http://localhost:3000/kultura">
+            <Link href={`${server}/kultura`}>
               <a>Sport</a>
             </Link>
-            <Link href="http://localhost:3000/na-danasnji-dan">
+            <Link href={`${server}/na-danasnji-dan`}>
               <a>Na današnji dan</a>
             </Link>
-            <Link href="http://localhost:3000/zanimljivosti">
+            <Link href={`${server}/zanimljivosti`}>
               <a>Zanimljivosti</a>
             </Link>
-            <Link href="http://localhost:3000/tech">
+            <Link href={`${server}/tech`}>
               <a>Tech</a>
             </Link>
           </div>
