@@ -1,3 +1,5 @@
 const dev = process.env.NODE_ENv !== "production";
 
-export const server = dev ? "http://localhost:3000" : "https://www.site.com";
+export const server = dev
+  ? "https://jsonplaceholder.typicode.com/todos"
+  : "https://www.site.com";
