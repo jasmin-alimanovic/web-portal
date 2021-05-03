@@ -5,6 +5,7 @@ import Reklama from "../../Components/Reklama";
 import Section from "../../Components/Section";
 import styles from "../../../styles/css/Search.module.css";
 import AsideSections from "../../Components/AsideSections";
+import { server } from "../../../config/index";
 
 const index = ({ posts }) => {
   console.log(posts);
@@ -35,7 +36,7 @@ const index = ({ posts }) => {
   );
 };
 export const getServerSideProps = async (context) => {
-  const res = await fetch(`http://localhost:3000/api/posts/`);
+  const res = await fetch(`${server}/api/posts`);
   let posts = await res.json();
   posts = posts.filter(
     (p) =>

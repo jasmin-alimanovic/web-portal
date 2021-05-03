@@ -7,6 +7,8 @@ import Section from "../../../Components/Section";
 import Tabs from "../../../Components/Tabs";
 import "bulma/css/bulma.min.css";
 import styles from "../../../../styles/css/PostPage.module.css";
+import { server } from "../../../../config/index";
+
 const index = ({ post }) => {
   //declaration of use states
   const [tabList, setTabList] = useState([]);
@@ -66,9 +68,7 @@ const index = ({ post }) => {
 };
 
 export const getServerSideProps = async (context) => {
-  const res = await fetch(
-    `http://localhost:3000/api/posts/${context.params.id}`
-  );
+  const res = await fetch(`${server}/api/posts/${context.params.id}`);
   const post = await res.json();
   return {
     props: {
