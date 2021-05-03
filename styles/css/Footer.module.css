@@ -1,0 +1,76 @@
+.footer {
+  background-color: #1b2d45;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 1rem;
+}
+.store:first-of-type {
+  margin-top: 2rem;
+}
+.Content {
+  width: 100%;
+}
+.mainContent {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 5rem !important;
+}
+.mainContent h2,
+.mainContent a,
+.mainContent p,
+.mainContent h3 {
+  color: white !important;
+  font-weight: lighter;
+}
+.mainContent a,
+.mainContent p {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: Josefin Sans;
+}
+.vijesti {
+  display: flex;
+  flex-direction: column;
+  line-height: 35px;
+}
+.socialNetworks {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+.store {
+  display: flex;
+  width: 80%;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  width: 80%;
+}
+.storeLogo {
+  transform: scale(2);
+  color: black;
+  margin-right: 0.5rem;
+}
+.storeContent h2,
+.storeContent p {
+  color: black !important;
+  font-family: Josefin Sans;
+  line-height: 20px;
+}
+.storeContent p {
+  font-size: 12px;
+}
+.storeGoogle {
+  background-color: black;
+  border: 1px solid white;
+}
+.storeContentGoogle p,
+.storeContentGoogle h2,
+.storeLogoGoogle {
+  color: white !important;
+}

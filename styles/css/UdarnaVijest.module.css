@@ -1,0 +1,29 @@
+.udarnaVijest {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  font-family: Josefin Sans;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+.btnUdarna {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 12rem;
+  text-align: center;
+  font-family: Yeseva One;
+  font-size: 18px;
+}
+@media only screen and (max-width: 1024px) {
+  .btnUdarna span {
+    display: none;
+  }
+  .udarnaVijest {
+    font-size: 14px;
+  }
+}

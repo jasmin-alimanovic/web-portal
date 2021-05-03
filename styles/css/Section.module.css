@@ -1,0 +1,31 @@
+.SportSection {
+  margin-top: 2rem;
+}
+.SportPosts {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1.5rem;
+}
+.PostsFlex {
+  display: flex;
+  flex-direction: column;
+}
+.SportPosts:nth-child(1) {
+  grid-column: 2 / span 1;
+}
+.SportPosts:nth-child(2) {
+  grid-column: 1 / span 1;
+}
+@media only screen and (max-width: 1024px) {
+  .SportPosts {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .SportPosts:nth-child(1) {
+    width: 100%;
+  }
+  .SportSection {
+    min-width: 100%;
+  }
+}

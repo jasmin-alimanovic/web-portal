@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+
+/**
+* declaring our colors
+**/
+$text: #1b2d45;
+$main: #ff5470;
+$red: #ff5470;
+$green: #00ebc7;
+$dark-color: #00214d;
+
+/**
+* overriding bulma colors
+**/
+$primary: $main;
+$primary-danger: $main;
+$danger-dark: $main;
+$danger: $main;
+$size-1: 34px;
+$size-2: 24px;
+$size-3: 18px;
+$size-4: 16px;
+$text-strong: $dark-color;
+$grey-darker: $dark-color;
+$dark: $dark-color;
+$family-sans-serif: "Yeseva One"; /**
+* importing bulma modules
+**/
+@import "../node_modules/bulma/sass/components/_all.sass";
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/elements/container.sass";
+@import "../node_modules/bulma/sass/elements/title.sass";
+@import "../node_modules/bulma/sass/form/_all.sass";
+@import "../node_modules/bulma/sass/layout/section.sass";
+
+/**
+* styleing
+**/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+.container {
+  margin-bottom: 3rem;
+}
+/* last link in outer navbar*/
+.lat {
+  background-color: $main;
+  color: #fff !important;
+}
+.card .post-img {
+  max-height: 70%;
+  min-height: 200px;
+}
+.card {
+  box-shadow: none;
+}
+
+a {
+  color: $dark-color !important;
+}
+a:hover {
+  color: $main !important;
+}
+a .title:hover {
+  color: $main !important;
+}
+
+h1 {
+  font-size: 34px;
+  font-family: "Yeseva One";
+  color: $dark-color;
+}
+h2 {
+  font-size: 24px;
+  font-family: "Yeseva One";
+  color: $dark-color !important;
+}
+h3 {
+  font-size: 18px;
+  font-family: "Yeseva One";
+  color: $dark-color;
+}
+h4 {
+  font-size: 16px;
+  font-family: "Yeseva One";
+  color: $dark-color;
+}
+.title {
+  font-weight: 600;
+  font-style: normal;
+}
+p {
+  font-size: 18px;
+  font-family: "Josefin Sans";
+  line-height: 22px;
+  color: $text;
+}
+.tabs.tabs.is-boxed li {
+  width: 100%;
+}
+.tabs.is-boxed li.is-active a {
+  color: $text;
+  background-color: #f2f4f6;
+}
+.tabs.is-boxed {
+  margin-bottom: 0;
+}
+div.section {
+  background-color: #f2f4f6;
+}
+.tabs li a {
+  color: #8090a6;
+}
+.navbar-burger span {
+  width: 20px;
+}
+label,
+input,
+button,
+textarea {
+  font-family: Josefin Sans;
+  color: $text !important;
+  font-size: 18px !important;
+}
+img {
+  opacity: 0.8;
+  transition: opacity 0.2s ease-in-out;
+}
+img:hover {
+  opacity: 1;
+}

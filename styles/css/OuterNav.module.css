@@ -1,0 +1,27 @@
+.navbar {
+  background-color: #f2f4f6;
+  font-family: "Josefin Sans";
+  font-weight: normal;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+}
+.navbarMenu {
+  max-width: 1140px;
+  color: #1b2d45;
+}
+.end {
+  display: flex;
+  justify-content: space-between;
+}
+.end a {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  color: #1b2d45;
+}
+.end a:last-of-type {
+  color: white;
+}
+.end a:hover {
+  color: #ff5470;
+}
