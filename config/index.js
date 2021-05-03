@@ -1,4 +1,6 @@
-const dev = process.env.NODE_ENv !== "production";
+const dev =
+  process.env.NODE_ENV !== "production" ||
+  process.env.NODE_ENV !== "Production";
 
 export const server = dev
   ? "http://localhost:3000"
