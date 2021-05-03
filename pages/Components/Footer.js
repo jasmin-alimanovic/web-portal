@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "../../styles/css/Footer.module.css";
 import Link from "next/link";
+import { server } from "../../config/index";
 
 const Footer = () => {
   return (
