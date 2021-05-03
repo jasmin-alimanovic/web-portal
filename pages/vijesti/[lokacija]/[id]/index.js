@@ -20,7 +20,7 @@ const index = ({ post }) => {
    * also in this function list of tabs is set
    */
   async function getPosts() {
-    const res = await fetch("http://localhost:3000/api/posts");
+    const res = await fetch(`${server}/api/posts`);
     const post = await res.json();
     setPosts(post);
     setTabList([
