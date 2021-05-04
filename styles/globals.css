@@ -5864,7 +5864,7 @@ textarea {
 }
 
 img {
-  opacity: 0.8;
+  opacity: 0.9;
   transition: opacity 0.2s ease-in-out;
 }
 
@@ -5877,7 +5877,7 @@ body {
   width: 100%;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 768px) {
   section {
     width: 100%;
   }

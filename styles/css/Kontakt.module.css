@@ -1,0 +1,35 @@
+.main {
+  width: 100%;
+  display: flex;
+}
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-right: 1rem;
+}
+.inputs {
+  display: flex;
+  width: 100%;
+}
+.contactInfo {
+  width: 30%;
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    flex-direction: column;
+  }
+  .contactForm {
+    width: 100%;
+  }
+  .inputs {
+    flex-direction: column;
+  }
+
+  .contactInfo {
+    width: 100%;
+  }
+}

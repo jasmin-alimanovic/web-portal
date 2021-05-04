@@ -5,7 +5,7 @@
   grid-template-rows: 300px 300px;
   grid-gap: 1.5rem;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 768px) {
   .topSection {
     display: flex;
     flex-direction: column;

@@ -3,6 +3,7 @@ import React from "react";
 import Layout from "../Components/Layout";
 import Reklama from "../Components/Reklama";
 import SectionTitle from "../Components/SectionTitle";
+import styles from "../../styles/css/Kontakt.module.css";
 
 const index = () => {
   return (
@@ -14,22 +15,9 @@ const index = () => {
       <div>
         <SectionTitle title="Kontaktirajte nas" />
 
-        <div className="main" style={{ width: "100%", display: "flex" }}>
-          <form
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              width: "70%",
-              marginRight: "1rem",
-            }}
-          >
-            <div
-              className="inputs"
-              style={{
-                display: "flex",
-                width: "100%",
-              }}
-            >
+        <div className={styles.main}>
+          <form className={styles.contactForm}>
+            <div className={styles.inputs}>
               <div
                 className="field"
                 style={{ width: "100%", marginRight: "1rem" }}
@@ -102,7 +90,7 @@ const index = () => {
             </button>
           </form>
 
-          <div style={{ width: "30%", marginLeft: "1rem", marginTop: "2rem" }}>
+          <div className={styles.contactInfo}>
             <p>
               {" "}
               <i className="fas fa-map-marker-alt"></i>&nbsp;&nbsp;&nbsp; 71123

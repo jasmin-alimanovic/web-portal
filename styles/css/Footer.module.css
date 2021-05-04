@@ -74,3 +74,50 @@
 .storeLogoGoogle {
   color: white !important;
 }
+
+@media only screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+  .logos {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  .store {
+    width: 45%;
+    padding: 0;
+    justify-content: space-around;
+    height: 60px;
+    margin-top: 1rem !important;
+  }
+
+  .store h2 {
+    font-size: 18px !important;
+  }
+  .storeApple h2 {
+    font-size: 24px !important;
+  }
+  .storeGoogle {
+    margin-bottom: 0;
+  }
+  .storeLogo {
+    margin-right: 0;
+    margin-left: 0.5rem;
+  }
+  .vijesti {
+    display: none;
+  }
+  .mainContent {
+    justify-content: start;
+  }
+  .contactInfo {
+    display: flex;
+    align-self: flex-start;
+    justify-self: flex-start;
+  }
+  .socialNetworks {
+    width: 50%;
+  }
+}

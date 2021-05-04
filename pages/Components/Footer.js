@@ -13,30 +13,32 @@ const Footer = () => {
           width={300}
           layout="intrinsic"
         />
-        <Link href="#">
-          <a className={styles.store}>
-            <div className={styles.storeLogo}>
-              <i className="fab fa-apple"></i>
-            </div>
-            <div className={styles.storeContent}>
-              <p className="subtitle">Available on the</p>
-              <h2 className="title is-2">App Store</h2>
-            </div>
-          </a>
-        </Link>
-        <Link href="#">
-          <a className={`${styles.store} ${styles.storeGoogle}`}>
-            <div className={`${styles.storeLogo} ${styles.storeLogoGoogle}`}>
-              <i className="fab fa-google-play"></i>
-            </div>
-            <div
-              className={`${styles.storeContent} ${styles.storeContentGoogle}`}
-            >
-              <p className="subtitle">GET IT ON</p>
-              <h2 className="title is-2">Google Play</h2>
-            </div>
-          </a>
-        </Link>
+        <div className={styles.logos}>
+          <Link href="#">
+            <a className={`${styles.store} ${styles.storeApple}`}>
+              <div className={styles.storeLogo}>
+                <i className="fab fa-apple"></i>
+              </div>
+              <div className={styles.storeContent}>
+                <p className="subtitle">Available on the</p>
+                <h2 className="title is-2">App Store</h2>
+              </div>
+            </a>
+          </Link>
+          <Link href="#">
+            <a className={`${styles.store} ${styles.storeGoogle}`}>
+              <div className={`${styles.storeLogo} ${styles.storeLogoGoogle}`}>
+                <i className="fab fa-google-play"></i>
+              </div>
+              <div
+                className={`${styles.storeContent} ${styles.storeContentGoogle}`}
+              >
+                <p className="subtitle">GET IT ON</p>
+                <h2 className="title is-2">Google Play</h2>
+              </div>
+            </a>
+          </Link>
+        </div>
       </div>
       <div className={`${styles.Content} content`}>
         <div className={`${styles.mainContent} content`}>
@@ -76,7 +78,7 @@ const Footer = () => {
               <a>Tech</a>
             </Link>
           </div>
-          <div className={styles.vijesti}>
+          <div className={`${styles.vijesti} ${styles.contactInfo}`}>
             <h2>Kontaktirajte nas</h2>
             <p>redakcija@princip.news</p>
             <p>marketing@princip.news</p>

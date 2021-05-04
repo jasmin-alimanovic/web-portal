@@ -54,7 +54,7 @@ const index = ({ post }) => {
             description={true}
           />
         </div>
-        <div>
+        <div className={styles.aside}>
           <Reklama img="/img/vertical.jpg" />
           <Tabs
             tabList={tabList}

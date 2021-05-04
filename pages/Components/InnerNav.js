@@ -15,7 +15,7 @@ const InnerNav = ({ search, onChangeVal }) => {
       <div className="navbar-brand">
         <Link href="/">
           <a className={styles.image}>
-            <Image src="/img/logo.png" width="250px" height="100px" />
+            <Image src="/img/logo.png" width="248px" height="98px" />
           </a>
         </Link>
         <div
@@ -24,7 +24,7 @@ const InnerNav = ({ search, onChangeVal }) => {
           }}
           role="button"
           className={`navbar-burger  ${isActive ? "is-active" : ""}`}
-          style={{ width: "20px" }}
+          style={{ marginTop: "3px" }}
           aria-label="menu"
           aria-expanded="false"
           data-target="navbar"
