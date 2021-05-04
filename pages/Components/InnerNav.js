@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import styles from "../../styles/css/InnerNav.module.css";
 import Image from "next/image";
 import { useState } from "react";
 const InnerNav = ({ search, onChangeVal }) => {
+  useEffect(() => {
+    setisActive(window?.innerWidth <= 1024 ? true : false);
+  }, []);
+
   const [isActive, setisActive] = useState(false);
   const [val, setVal] = useState("");
   return (

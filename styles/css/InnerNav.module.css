@@ -53,10 +53,13 @@ input.input {
   .searchMob {
     position: absolute;
     top: 0.5rem;
-    right: 3rem;
+    right: 4rem;
   }
   .navbar {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+  .navbarSearch {
+    display: block !important;
   }
 }
