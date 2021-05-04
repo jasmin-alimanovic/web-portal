@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 const InnerNav = ({ search, onChangeVal }) => {
   useEffect(() => {
-    setisActive(window?.innerWidth <= 1024 ? true : false);
+    setisActive(window?.innerWidth <= 1024 && search ? true : false);
   }, []);
 
   const [isActive, setisActive] = useState(false);
