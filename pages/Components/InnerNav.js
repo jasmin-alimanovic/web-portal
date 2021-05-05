@@ -4,22 +4,35 @@ import styles from "../../styles/css/InnerNav.module.css";
 import Image from "next/image";
 import { useState } from "react";
 const InnerNav = ({ search, onChangeVal }) => {
-  useEffect(() => {
-    setisActive(window?.innerWidth <= 1024 && search ? true : false);
-  }, []);
-
+  const [width, setWidth] = useState(1280);
   const [isActive, setisActive] = useState(false);
   const [val, setVal] = useState("");
+  useEffect(() => {
+    setisActive(window?.innerWidth <= 1024 && search ? true : false);
+    setWidth(window?.innerWidth);
+  }, []);
+
+  console.log(width);
   return (
     <nav
-      className={styles.navbar + " navbar is-transparent"}
+      className={`${styles.navbar}   navbar is-transparent ${
+        search && styles.navbarForSearch
+      }`}
       role="navigation"
       aria-label="main navigation"
     >
-      <div className="navbar-brand">
+      <div className={"navbar-brand " + styles.navbarBrand}>
         <Link href="/">
-          <a className={styles.image}>
-            <Image src="/img/logo.png" width="248px" height="98px" />
+          <a className={styles.image} style={{ border: "none" }}>
+            <Image
+              src={
+                width > 1024 || search
+                  ? "/img/logo.png"
+                  : "/img/footer-logo.png"
+              }
+              width="248px"
+              height="98px"
+            />
           </a>
         </Link>
         <div
@@ -27,7 +40,9 @@ const InnerNav = ({ search, onChangeVal }) => {
             setisActive(!isActive);
           }}
           role="button"
-          className={`navbar-burger  ${isActive ? "is-active" : ""}`}
+          className={`navbar-burger ${styles.burger}  ${
+            isActive ? "is-active" : ""
+          }`}
           style={{ marginTop: "3px" }}
           aria-label="menu"
           aria-expanded="false"
@@ -39,39 +54,72 @@ const InnerNav = ({ search, onChangeVal }) => {
         </div>
       </div>
 
-      <div id="navbar" className={`navbar-menu ${isActive ? "is-active" : ""}`}>
+      <div
+        id="navbar"
+        className={`navbar-menu ${styles.navbarMenu} ${
+          isActive ? `${styles.isActive} is-active` : ""
+        }`}
+        style={{ height: search ? "auto" : "100vh" }}
+      >
         {!search ? (
-          <div className={"navbar-end" + " " + styles.navbarEnd}>
-            <Link href="/vijesti">
-              <a className="navbar-item">Vijest</a>
-            </Link>
-            <Link href="/sport">
-              <a className="navbar-item">Sport</a>
-            </Link>
-            <Link href="/kultura">
-              <a className="navbar-item">Kultura</a>
-            </Link>
-            <Link href="/lifestyle">
-              <a className="navbar-item">Lifestyle</a>
-            </Link>
-            <Link href="/">
-              <a className="navbar-item">Tech</a>
-            </Link>
-            <Link href="/na-danasnji-dan">
-              <a className="navbar-item">Na današnji dan</a>
-            </Link>
-            <Link href="/zanimljivosti">
-              <a className="navbar-item">Zanimljivosti</a>
-            </Link>
-            <Link href="/search">
-              <a
-                className={"navbar-item " + styles.searchMob}
-                style={{ paddingRight: "0px !important" }}
+          <>
+            <div className={"navbar-start" + " " + styles.navbarStart}>
+              <Link href="/vijesti">
+                <a className="navbar-item">Vijest</a>
+              </Link>
+              <Link href="/sport">
+                <a className="navbar-item">Sport</a>
+              </Link>
+              <Link href="/kultura">
+                <a className="navbar-item">Kultura</a>
+              </Link>
+              <Link href="/lifestyle">
+                <a className="navbar-item">Lifestyle</a>
+              </Link>
+              <Link href="/">
+                <a className="navbar-item">Tech</a>
+              </Link>
+              <Link href="/na-danasnji-dan">
+                <a className="navbar-item">Na današnji dan</a>
+              </Link>
+              <Link href="/zanimljivosti">
+                <a className="navbar-item">Zanimljivosti</a>
+              </Link>
+              <Link href="/search">
+                <a
+                  className={"navbar-item " + styles.searchMob}
+                  style={{ paddingRight: "0px !important" }}
+                >
+                  <i className={styles.search + " " + "material-icons"}>
+                    search
+                  </i>
+                </a>
+              </Link>
+            </div>
+            <div className={styles.navbarEnd}>
+              <div
+                className={`${styles.vijesti} ${styles.contactInfo} navbar-item`}
               >
-                <i className={styles.search + " " + "material-icons"}>search</i>
-              </a>
-            </Link>
-          </div>
+                <h2>Kontaktirajte nas</h2>
+                <br />
+                <p>redakcija@princip.news</p>
+                <p>marketing@princip.news</p>
+                <br />
+                <h2>Pratite nas</h2>
+                <div className={styles.socialNetworks}>
+                  <a href="https://www.linkedin.com/" target="_blank">
+                    <i className="fab fa-linkedin-in"></i>
+                  </a>
+                  <a href="https://www.google.com/" target="_blank">
+                    <i className="fab fa-google"></i>
+                  </a>
+                  <a href="https://www.facebook.com/" target="_blank">
+                    <i className="fab fa-facebook-f"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </>
         ) : (
           <div className={styles.navbarSearch + " " + "navbar-end"}>
             <div

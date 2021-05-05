@@ -75,18 +75,18 @@ const index = () => {
             posts={currentPosts}
             title="Rezultati pretrage"
           />
+          <Pagination
+            posts={posts}
+            postsPerPage={postsPerPage}
+            currentPage={currentPage}
+            paginate={paginate}
+          />
         </div>
         <div className={styles.side}>
           <Reklama img="/img/vertical.jpg" />
           <AsideSections />
         </div>
       </div>
-      <Pagination
-        posts={posts}
-        postsPerPage={postsPerPage}
-        currentPage={currentPage}
-        paginate={paginate}
-      />
     </Layout>
   );
 };

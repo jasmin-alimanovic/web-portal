@@ -5884,5 +5884,8 @@ body {
   .posts {
     width: 100%;
   }
+  .navbar-item {
+    padding-left: 0 !important;
+  }
 }
 /*# sourceMappingURL=globals.css.map */

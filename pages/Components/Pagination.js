@@ -12,6 +12,10 @@ const Pagination = ({ posts, currentPage, paginate, postsPerPage }) => {
       className="pagination is-rounded"
       role="navigation"
       aria-label="pagination"
+      style={{
+        marginTop: "1.5rem",
+        marginBottom: "1.5rem",
+      }}
     >
       <a
         className="pagination-previous"
