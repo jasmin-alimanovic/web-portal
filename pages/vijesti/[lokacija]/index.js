@@ -8,7 +8,6 @@ import AsideSections from "../../Components/AsideSections";
 import { server } from "../../../config/index";
 
 const index = ({ posts }) => {
-  console.log(posts);
   return (
     <Layout>
       <Head>

@@ -12,7 +12,6 @@ const InnerNav = ({ search, onChangeVal }) => {
     setWidth(window?.innerWidth);
   }, []);
 
-  console.log(width);
   return (
     <nav
       className={`${styles.navbar}   navbar is-transparent ${
