@@ -8,8 +8,8 @@ const InnerNav = ({ search, onChangeVal }) => {
   const [isActive, setisActive] = useState(false);
   const [val, setVal] = useState("");
   useEffect(() => {
-    setisActive(window?.innerWidth <= 1024 && search ? true : false);
     setWidth(window?.innerWidth);
+    setisActive(window?.innerWidth <= 1024 && search ? true : false);
   }, []);
 
   return (
@@ -58,7 +58,6 @@ const InnerNav = ({ search, onChangeVal }) => {
         className={`navbar-menu ${styles.navbarMenu} ${
           isActive ? `${styles.isActive} is-active` : ""
         }`}
-        style={{ height: search ? "auto" : "100vh" }}
       >
         {!search ? (
           <>

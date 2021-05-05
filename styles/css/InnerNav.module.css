@@ -78,7 +78,6 @@ input.input {
     justify-content: space-between;
   }
   .navbarMenu {
-    height: 100vh;
     flex-direction: column;
     justify-content: space-between;
     background-color: #172b45;
@@ -107,6 +106,7 @@ input.input {
   .navbarEnd {
     display: flex !important;
     margin-bottom: 5rem;
+    margin-top: 5rem;
   }
   .vijesti {
     display: flex;
